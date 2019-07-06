@@ -19,19 +19,20 @@ router.get('/', (req, res) => {
              FROM US_Deaths 
              WHERE Quantifier=?`;
   let quantifier = 'Deaths Per Year'
-  let stringBuilder = "";
 
   db.all(sql,[quantifier],(err, rows) => {
     if(err){
       throw(err);
     }
+    let stringBuilder = 0;
     rows.forEach((row)=>{
-      stringBuilder = stringBuilder + row + '\n';
+      console.log(stringBuilder)
+      stringBuilder++;
+      console.log(row)
     });
-    console.log(rows)
+  res.send('This is a test')
   });
   
-  res.send(stringBuilder)
 
   //close sqlite database
   db.close((err) => {
