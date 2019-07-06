@@ -27,8 +27,12 @@ let db = new sqlite3.Database('./app/sql/death-db',sqlite3.OPEN_READONLY ,(err) 
 });
 
 // perform sqlite query
-let sql = `SELECT * FROM US_Deaths WHERE Quantifier="Deaths Per Year"`;
-db.all(sql,[],(err, rows) => {
+let sql = `SELECT * 
+           FROM US_Deaths 
+           WHERE Quantifier=?`;
+let quantifier = 'Deaths Per Year'
+
+db.all(sql,[quantifier],(err, rows) => {
   if(err){
     throw(err);
   }
