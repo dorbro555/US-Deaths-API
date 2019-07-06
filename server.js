@@ -17,6 +17,7 @@ var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
+// setup sqlite and access database
 const sqlite3 = require('sqlite3').verbose();
 let db = new sqlite3.Database('./app/sql/death-db',sqlite3.OPEN_READONLY ,(err) => {
   if(err){
@@ -25,6 +26,9 @@ let db = new sqlite3.Database('./app/sql/death-db',sqlite3.OPEN_READONLY ,(err) 
   console.log('Connected to the Us Deaths Database');
 });
 
+let sql = `SELECT * FROM US_Deaths WHERE Quantifier="Deaths Per Year"`;
+
+//close sqlite database
 db.close((err) => {
   if (err) {
     return console.error(err.message);
