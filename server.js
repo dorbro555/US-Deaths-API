@@ -3,7 +3,7 @@
 // init project
 var express = require('express');
 var app = express();
-//var US_db = require('./db.js');
+ US = require('./db.js');
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
