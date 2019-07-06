@@ -1,16 +1,17 @@
 const React = require('react');
 
-class App extends React.Component{
+class List extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      
+      results: {},
     }
   }
   
   componentDidMount(){
     fetch('/db')
-      .then((res) => res.json())
+    .then((res) => this.setState({results: res}))
+    
   }
   
   render (){
@@ -21,3 +22,5 @@ class App extends React.Component{
     )
   }
 }
+
+module.exports = List
