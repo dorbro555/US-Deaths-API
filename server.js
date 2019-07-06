@@ -8,7 +8,7 @@ var US_db = require('./routes/db.js');
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-app.get("/db",US_db);
+app.use("/db",US_db);
 
 app.get('/test', (req, res) =>{
   res.send('This is a test')
