@@ -24,13 +24,7 @@ router.get('/', (req, res) => {
     if(err){
       throw(err);
     }
-    let stringBuilder = 0;
-    rows.forEach((row)=>{
-      console.log(stringBuilder)
-      stringBuilder++;
-      console.log(row)
-    });
-  res.send('This is a test')
+    res.send(rows);
   });
   
 
