@@ -16,3 +16,5 @@ app.get("*", function(request, response) {
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+const sqlite3 = require('sqlite3').verbose();
