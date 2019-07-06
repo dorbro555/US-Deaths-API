@@ -18,4 +18,9 @@ var listener = app.listen(process.env.PORT, function () {
 });
 
 const sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database('',);
+let db = new sqlite3.Database('./app/sql/death-db',sqlite3.OPEN_READONLY ,(err) => {
+  if(err){
+    console.error(err);
+  }
+  console.log('Connected to the Us Deaths Database')
+});
