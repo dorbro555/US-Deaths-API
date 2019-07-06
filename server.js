@@ -10,6 +10,10 @@ app.use(express.static('public'));
 
 app.get("/db",US_db);
 
+app.get('/test', (req, res) =>{
+  res.send('This is a test')
+})
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("*", function(request, response) {
   response.sendFile(__dirname + '/app/index.html');
