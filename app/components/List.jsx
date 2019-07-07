@@ -19,12 +19,11 @@ class List extends React.Component{
   
   render (){
     if(!this.state.rows) {return <div>Loading</div>}
-    const allRows = this.state.rows.forEach((row, i) => {return row[2000]})
-    console.log(allRows)
+    const allRows = this.state.rows.map((row, i) => {return <li key={i}>{row[2000]}</li>})
     return(
       <div>
         <ul>
-          {allRows}
+          {[allRows]}
         </ul>
       </div>
     )
