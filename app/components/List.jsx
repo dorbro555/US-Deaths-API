@@ -19,10 +19,12 @@ class List extends React.Component{
   
   render (){
     if(!this.state.rows) {return <div>Loading</div>}
+    const allRows = this.state.rows.forEach((row, i) => {return row[2000]})
+    console.log(allRows)
     return(
       <div>
         <ul>
-          { this.state.rows.forEach((row, i) => {return <li key={i}>The rows type is {row.Quantifier}</li>})}
+          {allRows}
         </ul>
       </div>
     )
