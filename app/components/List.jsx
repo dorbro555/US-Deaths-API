@@ -14,6 +14,7 @@ class List extends React.Component{
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
+    
   }
   
   render (){

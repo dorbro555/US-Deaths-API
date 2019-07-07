@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
              FROM US_Deaths`;
   let quantifier = 'Deaths Per Year'
 
-  db.all(sql,[quantifier],(err, rows) => {
+  db.all(sql,[],(err, rows) => {
     if(err){
       throw(err);
     }
