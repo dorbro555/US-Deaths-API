@@ -26,6 +26,7 @@
   "repository": {
     "url": "https://glitch.com/edit/#!/starter-react-router"
   },
+  "proxy": "http://localhost:3000",
   "license": "MIT",
   "keywords": [
     "node",

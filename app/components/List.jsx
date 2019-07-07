@@ -17,7 +17,7 @@ class List extends React.Component{
   render (){
     return(
       <div>
-      
+        {this.state.results}
       </div>
     )
   }

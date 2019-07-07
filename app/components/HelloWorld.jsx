@@ -1,6 +1,7 @@
 const React = require('react');
 const Link = require('react-router-dom').Link
 const UnorderedList = require('./UnorderedList');
+const List = require('./List')
 
 const dependenciesArray = [
   'express - middleware for the node server',
