@@ -12,7 +12,7 @@ class List extends React.Component{
   componentDidMount(){
     fetch('/db')
     .then(res => res.json())
-    .then((rows) => { console.log(rows)
+    .then((rows) => { console.log(rows[0])
                       this.setState({rows: rows})})
     
   }
@@ -22,7 +22,7 @@ class List extends React.Component{
       <div>
         <ul>
           {Object.keys(this.state.rows[0]).map((key, i) => {
-            return <li key={i}>{key + ': ' + this.state.rows[0][key]}</li>
+            return <li key={i}>{key + ': ' }</li>
           })}
         </ul>
       </div>
