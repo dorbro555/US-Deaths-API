@@ -18,11 +18,11 @@ class List extends React.Component{
   }
   
   render (){
-    let row = this.state.rows[2]
+    if (this.state.rows) {console.log(this.state.rows[2])}
     return(
       <div>
         <ul>
-          {row.Quantifier}
+          {typeof row}
         </ul>
       </div>
     )
