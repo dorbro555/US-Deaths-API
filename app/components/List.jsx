@@ -4,20 +4,21 @@ class List extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      results: {},
+      rows: {},
     }
   }
   
   componentDidMount(){
     fetch('/db')
-    .then((res) => this.setState({results: res}))
-    
+    .then((res) => res.json)
+    .then((rows) => this.setState({rows}))
+    console.log(this.state.rows)
   }
   
   render (){
     return(
       <div>
-        {this.state.results}
+        
       </div>
     )
   }
