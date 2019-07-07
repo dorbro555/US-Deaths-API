@@ -4,23 +4,23 @@ class List extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      test: "test state",
       rows: {},
     }
   }
   
   componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then((res) => {
-                    res.json()})
+    .then(res => {console.log(res)
+                  return res.json()})
     .then((rows) => { console.log(rows)
                       this.setState({rows})})
-    //console.log(this.state.rows)
   }
   
   render (){
     return(
       <div>
-        
+        {this.state.rows}
       </div>
     )
   }
