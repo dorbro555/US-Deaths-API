@@ -10,11 +10,11 @@ class List extends React.Component{
   }
   
   componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    fetch('/db')
     .then(res => {console.log(res)
                   return res.json()})
-    .then((rows) => { console.log(rows)
-                      this.setState({rows})})
+    .then((rows) => { console.log(rows[0])
+                      this.setState({rows: rows[0]})})
   }
   
   render (){
@@ -22,7 +22,7 @@ class List extends React.Component{
       <div>
         <ul>
           {Object.keys(this.state.rows).map((key, i) => {
-            return <li key={i}>{this.state.rows[key]}</li>
+            return <li key={i}>{key + ': ' + this.state.rows[key]}</li>
           })}
         </ul>
       </div>
