@@ -5,7 +5,7 @@ class List extends React.Component{
     super(props)
     this.state = {
       test: "test state",
-      rows: {},
+      rows: [],
     }
   }
   
@@ -13,7 +13,7 @@ class List extends React.Component{
     fetch('/db')
     .then(res => res.json())
     .then((rows) => { console.log(rows)
-                      this.setState({rows: rows[0]})})
+                      this.setState({rows: rows})})
     
   }
   
@@ -21,9 +21,9 @@ class List extends React.Component{
     return(
       <div>
         <ul>
-          {this.state.rows.forEach({Object.keys(this.state.rows).map((key, i) => {
-            return <li key={i}>{key + ': ' + this.state.rows[key]}</li>
-          }))}}
+          {Object.keys(this.state.rows[0]).map((key, i) => {
+            return <li key={i}>{key + ': ' + this.state.rows[0][key]}</li>
+          })}
         </ul>
       </div>
     )
