@@ -5,7 +5,7 @@ class List extends React.Component{
     super(props)
     this.state = {
       test: "test state",
-      rows: [],
+      rows: null,
     }
   }
   
@@ -18,11 +18,14 @@ class List extends React.Component{
   }
   
   render (){
-    if (this.state.rows) {console.log(this.state.rows[2])}
+    if(!this.state.rows) {return <div>Loading</div>}
+    let row = this.state.rows[5]
     return(
       <div>
         <ul>
-          {typeof row}
+          { this.state.rows.forEach(row =>Object.keys(row).map((key, i) => {
+            return <li key={i}>{key + ': ' + row[key]}</li>
+          }))}
         </ul>
       </div>
     )
