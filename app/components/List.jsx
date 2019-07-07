@@ -19,8 +19,10 @@ class List extends React.Component{
   
   render (){
     if(!this.state.rows) {return <div>Loading</div>}
+    //Iterate through every row, then iterate through every column
     const allRows = this.state.rows.map((row) => {
-                    return Object.keys(row).map((key, i) => {return <li key={key + i}>{row[key]}</li>})})
+                      return Object.keys(row).map((key, i) => {
+                        return <li key={key + i}>{row[key]}</li>})})
     return(
       <div>
         <ul>
