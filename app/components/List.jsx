@@ -20,6 +20,10 @@ class List extends React.Component{
   render (){
     return(
       <div>
+        {Object.keys(this.state.rows).forEach(key => {
+          let val = this.state.rows[key]
+          
+        })}
         {this.state.rows.title}
       </div>
     )
