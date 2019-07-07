@@ -11,8 +11,7 @@ class List extends React.Component{
   
   componentDidMount(){
     fetch('/db')
-    .then(res => {console.log(res)
-                  return res.json()})
+    .then(res => res.json())
     .then((rows) => { console.log(rows[0])
                       this.setState({rows: rows[0]})})
   }
