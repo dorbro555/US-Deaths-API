@@ -16,8 +16,7 @@ router.get('/', (req, res) => {
   
   // perform sqlite query
   let sql = `SELECT * 
-             FROM US_Deaths 
-             WHERE Quantifier=?`;
+             FROM US_Deaths`;
   let quantifier = 'Deaths Per Year'
 
   db.all(sql,[quantifier],(err, rows) => {

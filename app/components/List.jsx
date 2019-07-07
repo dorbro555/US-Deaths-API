@@ -10,10 +10,10 @@ class List extends React.Component{
   }
   
   componentDidMount(){
-    fetch('/db')
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then(res => res.json())
-    .then((rows) => { console.log(rows[0])
-                      this.setState({rows: rows[0]})})
+    .then((rows) => { console.log(rows)
+                      this.setState({rows: rows})})
   }
   
   render (){
