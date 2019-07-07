@@ -5,7 +5,7 @@ class List extends React.Component{
     super(props)
     this.state = {
       test: "test state",
-      rows: {},
+      rows: [],
     }
   }
   
@@ -13,17 +13,16 @@ class List extends React.Component{
     fetch('/db')
     .then(res => res.json())
     .then((rows) => { console.log(rows)
-                      this.setState({rows: rows[1]})})
+                      this.setState({rows: rows})})
     
   }
   
   render (){
+    let row = this.state.rows[2]
     return(
       <div>
         <ul>
-          {Object.keys(this.state.rows).map((key, i) => {
-            return <li key={i}>{key + ': ' + this.state.rows[key]}</li>
-          })}
+          {row.Quantifier}
         </ul>
       </div>
     )
