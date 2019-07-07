@@ -19,13 +19,10 @@ class List extends React.Component{
   
   render (){
     if(!this.state.rows) {return <div>Loading</div>}
-    let row = this.state.rows[5]
     return(
       <div>
         <ul>
-          { this.state.rows.forEach(row =>Object.keys(row).map((key, i) => {
-            return <li key={i}>{key + ': ' + row[key]}</li>
-          }))}
+          { this.state.rows.forEach((row, i) => {return <li key={i}>The rows type is {row.Quantifier}</li>})}
         </ul>
       </div>
     )
