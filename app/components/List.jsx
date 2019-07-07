@@ -13,7 +13,7 @@ class List extends React.Component{
     fetch('/db')
     .then(res => res.json())
     .then((rows) => { console.log(rows)
-                      this.setState({rows: rows[0]})})
+                      this.setState({rows: rows[1]})})
     
   }
   
