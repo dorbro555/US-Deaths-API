@@ -20,11 +20,11 @@ class List extends React.Component{
   render (){
     return(
       <div>
-        {Object.keys(this.state.rows).map((key, i) => {
-          let val = this.state.rows[key]
-          return <li key={i}>{this.state.rows}</li>
-        })}
-        {this.state.rows.title}
+        <ul>
+          {Object.keys(this.state.rows).map((key, i) => {
+            return <li key={i}>{this.state.rows[key]}</li>
+          })}
+        </ul>
       </div>
     )
   }
