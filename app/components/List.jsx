@@ -20,7 +20,7 @@ class List extends React.Component{
   render (){
     return(
       <div>
-        {this.state.rows}
+        {this.state.rows.title}
       </div>
     )
   }
