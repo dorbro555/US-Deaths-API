@@ -37,10 +37,16 @@ class Table extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <th><abbr title='Firearm'>F</abbr></th>
-              <tr>2356641</tr>
-              <tr>2356641</tr>
-              <tr>2356641</tr>
+              <th><abbr title='US Total Population'>Total</abbr></th>
+              <td>2356641</td>
+              <td>2356641</td>
+              <td>2356641</td>
+            </tr>
+            <tr>
+              <th><abbr title='Deaths Per Year'>DPY</abbr></th>
+              <td>2356641</td>
+              <td>2356641</td>
+              <td>2356641</td>
             </tr>
           </tbody>
         </table>
