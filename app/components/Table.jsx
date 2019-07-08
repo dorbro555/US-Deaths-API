@@ -17,8 +17,10 @@ class Table extends React.Component {
   }
   
   render(){
+    if(!this.state.rows) {return <div></div>}
     
     const rows = this.state.rows.map(row => {return Object.keys(row)})
+    const headers = rows.map((row, i) => {return <th key={i}>{row.Quantifier}</th>})
     return(
       <div>
         Table
@@ -26,23 +28,7 @@ class Table extends React.Component {
           <thead>
             <tr>
               <th><abbr>Type</abbr></th>
-              <th>2000</th>
-              <th>2001</th>
-              <th>2002</th>
-              <th>2003</th>
-              <th>2004</th>
-              <th>2005</th>
-              <th>2006</th>
-              <th>2007</th>
-              <th>2008</th>
-              <th>2009</th>
-              <th>2010</th>
-              <th>2011</th>
-              <th>2012</th>
-              <th>2013</th>
-              <th>2014</th>
-              <th>2015</th>
-              <th>2016</th>
+              {headers}
             </tr>
           </thead>
           <tbody>
