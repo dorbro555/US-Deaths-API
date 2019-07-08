@@ -12,6 +12,13 @@ class Table extends React.Component {
     return(
       <div>
         Table
+        <table class='table'>
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
       </div>
     )
   }
