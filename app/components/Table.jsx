@@ -21,16 +21,17 @@ class Table extends React.Component {
     
     const rows = this.state.rows.map(row => {return Object.keys(row)})
     const headers = Object.keys(this.state.rows[0]).map((key,i) => {if (key!='Quantifier') return <th key={key+i}>{key}</th>})
-    const headers2 = this.state.rows.map((row,i) => {return <th key={i}>{row.Quantifier}</th>})
     const data = this.state.rows.map((row,i) => {return <tr>
                                                           <th key={i}><abbr title={row.Quantifier}>{i}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
-                                                            return <td key={key+j}>{row[key]}</td>})}
+                                                            if(key != 'Quantifier'){ 
+                                                              return <td key={key+j}>{row[key]}</td>
+                                                            }})}
                                                         </tr>})
     return(
-      <div>
+      <div style={{overflow:'auto'}}>
         Table
-        <table class='table' style={{overflow:'auto'}}>
+        <table class='table' style={{width:'200%'}}>
           <thead>
             <tr>
               <th><abbr>Type</abbr></th>
@@ -38,18 +39,6 @@ class Table extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th><abbr title='US Total Population'>Total</abbr></th>
-              <td>2356641</td>
-              <td>2356641</td>
-              <td>2356641</td>
-            </tr>
-            <tr>
-              <th><abbr title='Deaths Per Year'>DPY</abbr></th>
-              <td>2356641</td>
-              <td>2356641</td>
-              <td>2356641</td>
-            </tr>
             {data}
           </tbody>
         </table>

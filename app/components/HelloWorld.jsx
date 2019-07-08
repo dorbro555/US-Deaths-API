@@ -40,7 +40,7 @@ const HelloWorld = function(){
 
           <UnorderedList items={componentsMade} />
 
-          <List/>
+          
           <Table/>
         </div>
       </div>
