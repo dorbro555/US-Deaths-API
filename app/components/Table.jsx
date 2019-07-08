@@ -4,8 +4,16 @@ class Table extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      
+      rows: null,
     }
+  }
+  
+  componentDidMount(){
+    fetch('/db')
+    .then(res => res.json())
+    .then((rows) => { console.log(rows)
+                      this.setState({rows: rows})})
+    
   }
   
   render(){
