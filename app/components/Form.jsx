@@ -1,6 +1,6 @@
 const React = require('react')
 
-class FlavorForm extends React.Component {
+class DataForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: 'coconut'};
@@ -36,4 +36,4 @@ class FlavorForm extends React.Component {
   }
 }
 
-module.exports = FlavorForm
+module.exports = DataForm
