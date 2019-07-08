@@ -17,6 +17,8 @@ class Table extends React.Component {
   }
   
   render(){
+    
+    const rows = this.state.rows.map(row => {return Object.keys(row)})
     return(
       <div>
         Table
