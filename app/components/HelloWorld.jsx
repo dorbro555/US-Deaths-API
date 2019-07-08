@@ -25,7 +25,7 @@ const HelloWorld = function(){
   return (
     <div>
       <div class='columns is-centered'>
-        <div class='column is-8'>
+        <div class='column is-10'>
           <h1>Hello World!</h1>
 
           <Link to='/about'>Learn about this app!</Link>

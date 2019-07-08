@@ -20,8 +20,8 @@ class Table extends React.Component {
     if(!this.state.rows) {return <div></div>}
     
     const rows = this.state.rows.map(row => {return Object.keys(row)})
-    const headers = rows.map((key, i) => {return <th key={i}>{key.Quantifier}</th>})
-    const headers2 = this.state.rows.map(row => {return Object.keys(row).map((key, i) => {return <td></td>})})
+    const headers = Object.keys(this.state.rows[0]).map((key,i) => {return <th key={key+i}>{key}</th>})
+    const headers2 = this.state.rows.map((row,i) => {return <th key={i}>{row.Quantifier}</th>})
     return(
       <div>
         Table
