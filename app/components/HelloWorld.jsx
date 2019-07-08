@@ -2,6 +2,7 @@ const React = require('react');
 const Link = require('react-router-dom').Link
 const UnorderedList = require('./UnorderedList');
 const List = require('./List')
+const Table = require('./Table')
 
 const dependenciesArray = [
   'express - middleware for the node server',
@@ -40,6 +41,7 @@ const HelloWorld = function(){
           <UnorderedList items={componentsMade} />
 
           <List/>
+          <Table/>
         </div>
       </div>
     </div>
