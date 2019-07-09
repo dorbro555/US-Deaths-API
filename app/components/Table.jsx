@@ -22,7 +22,7 @@ class Table extends React.Component {
     const rows = this.state.rows.map(row => {return Object.keys(row)})
     const headers = Object.keys(this.state.rows[0]).map((key,i) => {if (key!='Quantifier') return <th key={key+i}>{key}</th>})
     const data = this.state.rows.map((row,i) => {return <tr>
-                                                          <th key={i}><abbr title={row.Quantifier}>{i}</abbr></th>
+                                                          <th key={i}><abbr title={row.Quantifier} class='is-size-7'>{row.Quantifier}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
                                                             if(key != 'Quantifier'){ 
                                                               return <td key={key+j}>{row[key]}</td>
