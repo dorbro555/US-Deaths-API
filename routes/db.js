@@ -37,6 +37,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:dataset', (req, res) => {
+  const dbTableMap = {
+    'US_Deaths': `SELECT * FROM US_Deaths`,
+  }
+  
   
   let db = new sqlite3.Database('./app/sql/death-db',sqlite3.OPEN_READONLY ,(err) => {
     if(err){
@@ -46,11 +50,8 @@ router.get('/:dataset', (req, res) => {
   });
   
   // perform sqlite query
-  let sql = `SELECT * 
-             FROM ?`;
-  let quantifier = 'US_Deaths'
-  console.log(req.params.dataset)
-  db.all(sql,[quantifier],(err, rows) => {
+  let sql = dbTableMap[req.params.dataset]
+  db.all(sql,[],(err, rows) => {
     if(err){
       throw(err);
     }
