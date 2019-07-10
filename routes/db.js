@@ -47,10 +47,10 @@ router.get('/:dataset', (req, res) => {
   
   // perform sqlite query
   let sql = `SELECT * 
-             FROM ${req.params.dataset}`;
-  let quantifier = 'Deaths Per Year'
+             FROM ?`;
+  let quantifier = 'US_Deaths'
   console.log(req.params.dataset)
-  db.all(sql,[],(err, rows) => {
+  db.all(sql,[quantifier],(err, rows) => {
     if(err){
       throw(err);
     }
