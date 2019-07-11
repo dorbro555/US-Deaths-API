@@ -40,6 +40,7 @@ router.get('/:dataset', (req, res) => {
   
   const dbTableMap = {
     'US_Deaths': `SELECT * FROM US_Deaths`,
+    'Breakdown_Overview': 'SELECT * FROM US_Deaths_Breakdown',
   }
   
   
