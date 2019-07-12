@@ -3,7 +3,7 @@ const React = require('react')
 class DataForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'coconut',
+    this.state = {value: '/db',
                  rows: null};
 
     this.handleChange = this.handleChange.bind(this);
@@ -36,7 +36,7 @@ class DataForm extends React.Component {
         <label>
           Pick your favorite flavor:
           <select value={this.state.value} onChange={this.handleChange}>
-            <option value="grapefruit">Grapefruit</option>
+            <option value="/db">High Level Overview</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
             <option value="mango">Mango</option>
