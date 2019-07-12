@@ -26,10 +26,10 @@ class DataForm extends React.Component {
           Pick your favorite flavor:
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="/db">High Level Overview</option>
-            <option value="/db/Breakdown_Overview">Lime</option>
-            <option value="/db/Breakdown_Race">Coconut</option>
-            <option value="/db/Breakdown_Age">Mango</option>
-            <option value="/db/State_and_USPop_Overview">Mango</option>
+            <option value="/db/Breakdown_Overview">Breakdown of Overview</option>
+            <option value="/db/Breakdown_Race">Breakdown of Overview by Race</option>
+            <option value="/db/Breakdown_Age">Breakdown of Overview by Age</option>
+            <option value="/db/State_and_USPop_Overview">High Level of State & US Pop Overview</option>
             <option value="/db/State_and_USPop_Breakdown">Mango</option>
             <option value="/db/State_and_USPop_Race">Mango</option>
             <option value="/db/Firearm_Breakdown">Mango</option>
