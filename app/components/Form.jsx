@@ -36,7 +36,7 @@ class DataForm extends React.Component {
           </select>
         </label>
         <input type="submit" value="Submit" />
-        <Table/>
+        <Table table={this.state.sheet}/>
       </form>
     );
   }
