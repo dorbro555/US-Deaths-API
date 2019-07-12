@@ -16,7 +16,9 @@ class DataForm extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({sheet: this.state.value})
+    this.setState({sheet: this.state.value});
+    console.log(this.state.sheet)
+    event.preventDefault();
   }
 
   render() {

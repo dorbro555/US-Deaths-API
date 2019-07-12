@@ -15,7 +15,6 @@ class Table extends React.Component {
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
     alert('Hello world' + this.props.sheet)
-    
   }
   
   render(){
