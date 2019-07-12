@@ -16,14 +16,14 @@ class DataForm extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({sheet: ''})
+    this.setState({sheet: this.state.value})
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Pick your favorite flavor:
+          Pick the datasheet:
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="/db">High Level Overview</option>
             <option value="/db/Breakdown_Overview">Breakdown of Overview</option>
