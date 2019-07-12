@@ -3,10 +3,19 @@ const React = require('react')
 class DataForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'coconut'};
+    this.state = {value: 'coconut',
+                 rows: null};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
+  componentDidMount(){
+    fetch('/db')
+    .then(res => res.json())
+    .then((rows) => { console.log(rows)
+                      this.setState({rows: rows})})
+    
   }
 
   handleChange(event) {
@@ -14,7 +23,10 @@ class DataForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Your favorite flavor is: ' + this.state.value);
+    fetch(this.state.value)
+    .then(res => res.json())
+    .then((rows) => { console.log(rows)
+                      this.setState({rows: rows})})
     event.preventDefault();
   }
 
