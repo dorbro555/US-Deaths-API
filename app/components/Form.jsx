@@ -4,7 +4,7 @@ class DataForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: '/db',
-                 rows: null};
+                 sheet: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,11 +23,7 @@ class DataForm extends React.Component {
   }
 
   handleSubmit(event) {
-    fetch(this.state.value)
-    .then(res => res.json())
-    .then((rows) => { console.log(rows)
-                      this.setState({rows: rows})})
-    event.preventDefault();
+    this.setState({sheet: ''})
   }
 
   render() {
