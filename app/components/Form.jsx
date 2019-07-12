@@ -26,9 +26,13 @@ class DataForm extends React.Component {
           Pick your favorite flavor:
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="/db">High Level Overview</option>
-            <option value="lime">Lime</option>
-            <option value="coconut">Coconut</option>
-            <option value="mango">Mango</option>
+            <option value="/db">Lime</option>
+            <option value="/db">Coconut</option>
+            <option value="/db">Mango</option>
+            <option value="/db">Mango</option>
+            <option value="/db">Mango</option>
+            <option value="/db">Mango</option>
+            <option value="/db">Mango</option>
           </select>
         </label>
         <input type="submit" value="Submit" />
