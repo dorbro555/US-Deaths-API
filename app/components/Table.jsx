@@ -10,7 +10,7 @@ class Table extends React.Component {
   }
   
   componentDidMount(){
-    fetch('/db')
+    fetch('/db/Firearm_Breakdown')
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
@@ -21,7 +21,7 @@ class Table extends React.Component {
     if(!this.state.rows) {return <div></div>}
     
     const rows = this.state.rows.map(row => {return Object.keys(row)})
-    const headers = Object.keys(this.state.rows[0]).map((key,i) => {if (key!='Quantifier') return <th key={key+i}>{key}</th>})
+    const headers = Object.keys(this.state.rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
     const data = this.state.rows.map((row,i) => {return <tr>
                                                           <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
