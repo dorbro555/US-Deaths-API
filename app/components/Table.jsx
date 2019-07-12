@@ -10,7 +10,7 @@ class Table extends React.Component {
   }
   
   componentDidMount(){
-    fetch('/db/Firearm_Breakdown')
+    fetch('/db')
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
