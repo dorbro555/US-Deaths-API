@@ -2,7 +2,6 @@ const React = require('react');
 const Link = require('react-router-dom').Link
 const UnorderedList = require('./UnorderedList');
 const List = require('./List')
-const Table = require('./Table')
 const Form = require('./Form')
 
 const dependenciesArray = [
@@ -32,7 +31,6 @@ const HelloWorld = function(){
           <Link to='/about'>Learn about this app!</Link>
 
           <Form/>
-          <Table/>
         </div>
       </div>
     </div>

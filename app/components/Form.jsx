@@ -1,4 +1,5 @@
 const React = require('react')
+const Table = require('./Table')
 
 class DataForm extends React.Component {
   constructor(props) {
@@ -8,14 +9,6 @@ class DataForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  
-  componentDidMount(){
-    fetch('/db')
-    .then(res => res.json())
-    .then((rows) => { console.log(rows)
-                      this.setState({rows: rows})})
-    
   }
 
   handleChange(event) {
@@ -39,6 +32,7 @@ class DataForm extends React.Component {
           </select>
         </label>
         <input type="submit" value="Submit" />
+        <Table/>
       </form>
     );
   }
