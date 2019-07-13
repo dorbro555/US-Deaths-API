@@ -19,7 +19,6 @@ class Table extends React.Component {
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
-    console.log('Hello world' + this.props.sheet)
   }
   
   handleChange(event) {
@@ -27,7 +26,7 @@ class Table extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({sheet: this.state.value});
+    this.setState({sheet: this.state.value}).then(
     console.log(this.state.sheet)
     event.preventDefault();
   }
@@ -61,8 +60,8 @@ class Table extends React.Component {
             </select>
           </label>
           <input type="submit" value="Submit" />
-          <Table sheet={this.state.sheet}/>
         </form>
+        
         <div style={{overflow:'auto'}}>
           Table
           <table class='table' style={{width:'200%'}}>
