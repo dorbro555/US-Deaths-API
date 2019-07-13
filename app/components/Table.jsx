@@ -6,7 +6,12 @@ class Table extends React.Component {
     super(props)
     this.state = {
       rows: null,
+      value: '/db',
+      sheet: '',
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   componentDidMount(){
@@ -15,6 +20,16 @@ class Table extends React.Component {
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
     console.log('Hello world' + this.props.sheet)
+  }
+  
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    this.setState({sheet: this.state.value});
+    console.log(this.state.sheet)
+    event.preventDefault();
   }
   
   render(){
@@ -30,19 +45,38 @@ class Table extends React.Component {
                                                             }})}
                                                         </tr>})
     return(
-      <div style={{overflow:'auto'}}>
-        Table
-        <table class='table' style={{width:'200%'}}>
-          <thead>
-            <tr>
-              <th><abbr>Type</abbr></th>
-              {headers}
-            </tr>
-          </thead>
-          <tbody>
-            {data}
-          </tbody>
-        </table>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Pick the datasheet:
+            <select value={this.state.value} onChange={this.handleChange}>
+              <option value="/db">High Level Overview</option>
+              <option value="/db/Breakdown_Overview">Breakdown of Overview</option>
+              <option value="/db/Breakdown_Race">Breakdown of Overview by Race</option>
+              <option value="/db/Breakdown_Age">Breakdown of Overview by Age</option>
+              <option value="/db/State_and_USPop_Overview">High Level of State & US Pop. Overview</option>
+              <option value="/db/State_and_USPop_Breakdown">Breakdown of State & US Pop.</option>
+              <option value="/db/State_and_USPop_Race">State & US Pop. Breakdown by Race</option>
+              <option value="/db/Firearm_Breakdown">Firearm Death Specific Breakdown</option>
+            </select>
+          </label>
+          <input type="submit" value="Submit" />
+          <Table sheet={this.state.sheet}/>
+        </form>
+        <div style={{overflow:'auto'}}>
+          Table
+          <table class='table' style={{width:'200%'}}>
+            <thead>
+              <tr>
+                <th><abbr>Type</abbr></th>
+                {headers}
+              </tr>
+            </thead>
+            <tbody>
+              {data}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }
