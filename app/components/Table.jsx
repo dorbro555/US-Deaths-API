@@ -8,6 +8,8 @@ class Table extends React.Component {
       rows: null,
       value: '/db',
       sheet: '/db',
+      headers: null,
+      data: null,
     }
     
     this.handleChange = this.handleChange.bind(this);
@@ -19,6 +21,17 @@ class Table extends React.Component {
     const rows = await res.json()
     await this.setState({rows: rows})
     console.log('Mounted: ' + this.state.sheet)
+    
+    const rowsArray = rows.map(row => {return Object.keys(row)})
+    const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
+    const data = rows.map((row,i) => {return <tr>
+                                                          <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
+                                                          {Object.keys(row).map((key, j) => {
+                                                            if(key != 'Title'){ 
+                                                              return <td key={key+j}>{row[key]}</td>
+                                                            }})}
+                                                        </tr>})
+    this.setState({headers: headers, data: data})
   }
   
   async handleChange(event) {
@@ -33,17 +46,9 @@ class Table extends React.Component {
   }
   
   render(){
-    if(!this.state.rows) {return <div></div>}
-    
-    const rows = this.state.rows.map(row => {return Object.keys(row)})
-    const headers = Object.keys(this.state.rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
-    const data = this.state.rows.map((row,i) => {return <tr>
-                                                          <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
-                                                          {Object.keys(row).map((key, j) => {
-                                                            if(key != 'Title'){ 
-                                                              return <td key={key+j}>{row[key]}</td>
-                                                            }})}
-                                                        </tr>})
+    if(!this.state.headers && !this.state.data) {return <div></div>}
+
+   
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -69,11 +74,11 @@ class Table extends React.Component {
             <thead>
               <tr>
                 <th><abbr>Type</abbr></th>
-                {headers}
+                {this.state.headers}
               </tr>
             </thead>
             <tbody>
-              {data}
+              {this.state.data}
             </tbody>
           </table>
         </div>
