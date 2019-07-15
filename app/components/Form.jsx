@@ -16,9 +16,9 @@ class DataForm extends React.Component {
     console.log('value: ' + this.state.value)
   }
 
-  handleSubmit(event) {
-    this.setState({sheet: this.state.value});
-    console.log(this.state.sheet)
+  async handleSubmit(event) {
+    await this.setState({sheet: this.state.value});
+    console.log('Form sheet: ' + this.state.sheet)
     event.preventDefault();
   }
 

@@ -7,19 +7,19 @@ class Table extends React.Component {
     this.state = {
       rows: null,
       value: '/db',
-      sheet: '/db',
+      sheet: '',
     }
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
-  componentDidMount(){
-    fetch(this.state.sheet)
+  async componentDidMount(){
+    console.log('mounted' + this.props.sheet);
+    await fetch(this.props.sheet)
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
-    console.log('Mounted: ' + this.state.sheet)
   }
   
   async handleChange(event) {
