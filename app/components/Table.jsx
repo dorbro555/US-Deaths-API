@@ -22,8 +22,8 @@ class Table extends React.Component {
     console.log('Mounted: ' + this.state.sheet)
   }
   
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  async handleChange(event) {
+    await this.setState({value: event.target.value});
     console.log('value: ' + this.state.value)
   }
 
