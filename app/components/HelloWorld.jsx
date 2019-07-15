@@ -31,7 +31,7 @@ const HelloWorld = function(){
 
           <Link to='/about'>Learn about this app!</Link>
 
-          <Form/>
+          <Table/>
         </div>
       </div>
     </div>

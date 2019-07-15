@@ -7,7 +7,7 @@ class Table extends React.Component {
     this.state = {
       rows: null,
       value: '/db',
-      sheet: '',
+      sheet: '/db',
     }
     
     this.handleChange = this.handleChange.bind(this);
@@ -15,11 +15,11 @@ class Table extends React.Component {
   }
   
   async componentDidMount(){
-    console.log('mounted' + this.props.sheet);
-    await fetch(this.props.sheet)
+    await fetch(this.state.sheet)
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
+    console.log('Mounted: ' + this.state.sheet)
   }
   
   async handleChange(event) {
@@ -46,6 +46,23 @@ class Table extends React.Component {
                                                         </tr>})
     return(
       <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Pick the datasheet:
+            <select value={this.state.value} onChange={this.handleChange}>
+              <option value="/db">High Level Overview</option>
+              <option value="/db/Breakdown_Overview">Breakdown of Overview</option>
+              <option value="/db/Breakdown_Race">Breakdown of Overview by Race</option>
+              <option value="/db/Breakdown_Age">Breakdown of Overview by Age</option>
+              <option value="/db/State_and_USPop_Overview">High Level of State & US Pop. Overview</option>
+              <option value="/db/State_and_USPop_Breakdown">Breakdown of State & US Pop.</option>
+              <option value="/db/State_and_USPop_Race">State & US Pop. Breakdown by Race</option>
+              <option value="/db/Firearm_Breakdown">Firearm Death Specific Breakdown</option>
+            </select>
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        
         <div style={{overflow:'auto'}}>
           Table
           <table class='table' style={{width:'200%'}}>
