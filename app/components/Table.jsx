@@ -33,19 +33,19 @@ class Table extends React.Component {
   
   async componentDidUpdate(prevProps,prevState){
    if(prevState.sheet != this.state.sheet){
-    const res = await fetch(this.state.sheet)
-    const rows = await res.json()
-    
-    const rowsArray = rows.map(row => {return Object.keys(row)})
-    const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
-    const data = rows.map((row,i) => {return <tr>
-                                                          <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
-                                                          {Object.keys(row).map((key, j) => {
-                                                            if(key != 'Title'){ 
-                                                              return <td key={key+j}>{row[key]}</td>
-                                                            }})}
-                                                        </tr>})
-    this.setState({headers: headers, data: data})
+      const res = await fetch(this.state.sheet)
+      const rows = await res.json()
+
+      const rowsArray = rows.map(row => {return Object.keys(row)})
+      const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
+      const data = rows.map((row,i) => {return <tr>
+                                                            <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
+                                                            {Object.keys(row).map((key, j) => {
+                                                              if(key != 'Title'){ 
+                                                                return <td key={key+j}>{row[key]}</td>
+                                                              }})}
+                                                          </tr>})
+      this.setState({headers: headers, data: data})
    }
   }
   
