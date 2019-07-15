@@ -34,6 +34,10 @@ class Table extends React.Component {
     this.setState({headers: headers, data: data})
   }
   
+  componentDidUpdate(prevProps,prevState){
+    console.log(prevState)
+  }
+  
   async handleChange(event) {
     await this.setState({value: event.target.value});
     console.log('value: ' + this.state.value)
@@ -41,7 +45,6 @@ class Table extends React.Component {
 
   handleSubmit(event) {
     this.setState({sheet: this.state.value})
-    console.log('sheet: ' + this.state.value)
     event.preventDefault();
   }
   
