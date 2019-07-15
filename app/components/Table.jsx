@@ -17,8 +17,7 @@ class Table extends React.Component {
   async componentDidMount(){
     const res = await fetch(this.state.sheet)
     const rows = await res.json()
-    .then((rows) => { console.log(rows)
-                      this.setState({rows: rows})})
+    await this.setState({rows: rows})
     console.log('Mounted: ' + this.state.sheet)
   }
   
