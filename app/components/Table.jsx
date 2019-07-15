@@ -19,6 +19,7 @@ class Table extends React.Component {
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
+    console.log(this.state.sheet)
   }
   
   handleChange(event) {
@@ -26,8 +27,7 @@ class Table extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({sheet: this.state.value}).then(
-    console.log(this.state.sheet)
+    this.setState({sheet: this.state.value})
     event.preventDefault();
   }
   
