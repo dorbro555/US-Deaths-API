@@ -29,7 +29,6 @@ class Table extends React.Component {
 
   handleSubmit(event) {
     this.setState({sheet: this.state.value})
-    console.log('submitted:' + event)
     event.preventDefault();
   }
   
