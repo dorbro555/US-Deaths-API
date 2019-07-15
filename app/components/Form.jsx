@@ -11,8 +11,9 @@ class DataForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  async handleChange(event) {
+    await this.setState({value: event.target.value});
+    console.log('value: ' + this.state.value)
   }
 
   handleSubmit(event) {
