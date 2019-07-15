@@ -14,8 +14,8 @@ class Table extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
-  async componentDidMount(){
-    await fetch(this.state.sheet)
+  componentDidMount(){
+    fetch(this.state.sheet)
     .then(res => res.json())
     .then((rows) => { console.log(rows)
                       this.setState({rows: rows})})
