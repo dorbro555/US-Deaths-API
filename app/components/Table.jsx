@@ -35,7 +35,7 @@ class Table extends React.Component {
   }
   
   componentDidUpdate(prevProps,prevState){
-    console.log(prevState)
+    console.log(prevState.sheet != this.state.sheet)
   }
   
   async handleChange(event) {
