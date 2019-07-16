@@ -207,7 +207,7 @@ const abbrMapRace = {
   'Asian % vs Drug Induced Deaths':'Asian % vs Drug Induced Deaths',
   'African American % vs Drug Induced Deaths':'Afri Amer % vs Drug Induced Deaths',
   'White % vs Drug Induced Deaths':'White % vs Drug Induced Deaths',
-  '':'',
+  'Hispanic % vs Drug Induced Deaths':'Hispanic % vs Drug Induced Deaths',
   '':'',
   '':'',
   '':'',
