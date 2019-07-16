@@ -1,5 +1,5 @@
 const React = require('react')
-const abbrMap = require('./abbrLists')
+const aggregatedMap = require('./abbrLists')
 
 class Table extends React.Component {
   constructor(props){
@@ -22,7 +22,7 @@ class Table extends React.Component {
     const rowsArray = rows.map(row => {return Object.keys(row)})
     const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
     const data = rows.map((row,i) => {return <tr>
-                                                          <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
+                                                          <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
                                                             if(key != 'Title'){ 
                                                               return <td key={key+j}>{row[key]}</td>
@@ -39,7 +39,7 @@ class Table extends React.Component {
       const rowsArray = rows.map(row => {return Object.keys(row)})
       const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
       const data = rows.map((row,i) => {return <tr>
-                                                            <th key={i}><abbr title={row.Title}>{abbrMap[row.Title]}</abbr></th>
+                                                            <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                             {Object.keys(row).map((key, j) => {
                                                               if(key != 'Title'){ 
                                                                 return <td key={key+j}>{row[key]}</td>
