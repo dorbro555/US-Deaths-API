@@ -21,13 +21,20 @@ class Table extends React.Component {
     
     const rowsArray = rows.map(row => {return Object.keys(row)})
     const headers = Object.keys(rows[0]).map((key,i) => {if (key!='Title') return <th key={key+i}>{key}</th>})
-    const data = rows.map((row,i) => {return <tr>
+    const data = rows.map((row,i) => {if () {return <tr>
                                                           <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
                                                             if(key != 'Title'){ 
                                                               return <td key={key+j}>{row[key]}</td>
                                                             }})}
-                                                        </tr>})
+                                                        </tr>}
+                                     else {return <tr>
+                                                          <th key={i}>{row.Title}</th>
+                                                          {Object.keys(row).map((key, j) => {
+                                                            if(key != 'Title'){ 
+                                                              return <td key={key+j}>{row[key]}</td>
+                                                            }})}
+                                                        </tr>}})
     this.setState({headers: headers, data: data})
   }
   
