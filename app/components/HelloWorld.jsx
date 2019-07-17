@@ -27,7 +27,7 @@ const HelloWorld = function(){
     <div>
       <div class='columns is-centered'>
         <div class='column is-10'>
-          <h1>Hello World!</h1>
+          <h1>Data Mining Project for Deaths in America</h1>
 
           <Link to='/about'>Learn about this app!</Link>
 
