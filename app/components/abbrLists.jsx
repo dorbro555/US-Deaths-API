@@ -435,7 +435,7 @@ const abbrMapAge ={
   'Not Stated Age % vs Firearm Deaths Per year':'Not Stated Age % vs Firearm Deaths Per year',
   'Not Stated Age % vs Firearms Death by Age Group':'Not Stated Age % vs Firearms Death by Age Group',
   'Firearm Assault/Homicide':'Firearm Assault/Homicide',
-  '':'',
+  '<1 Age % of Firearm Assault/Homicide Deaths':'<1 Age % of Firearm Assault/Homicide Deaths',
   '':'',
   '':'',
   '':'',
