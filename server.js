@@ -10,8 +10,19 @@ app.use(express.static('public'));
 
 app.use("/db",US_db);
 
-app.get('/test', (req, res) =>{
-  res.send('This is a test')
+app.get('/routes', (req, res) => {
+  const routes ={
+    1:'db/US_Deaths',
+    2:'db/Breakdown_Overview',
+    3:'db/Breakdown_Race',
+    4:'db/Breakdown_Age',
+    5:'db/State_and_USPop_Overview',
+    6:'db/State_and_USPop_Breakdown',
+    7:'db/State_and_USPop_Race',
+    8:'db/Firearm_Breakdown',
+  }
+  
+  res.send(routes)
 })
 
 // http://expressjs.com/en/starter/basic-routing.html

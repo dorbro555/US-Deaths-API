@@ -76,19 +76,4 @@ router.get('/:dataset', (req, res) => {
   });
 })
 
-router.get('/routes', (req, res) => {
-  const routes ={
-    1:'',
-    1:'',
-    1:'',
-    1:'',
-    1:'',
-    1:'',
-    1:'',
-    1:'',
-  }
-  
-  res.send(routes)
-})
-
 module.exports = router;
