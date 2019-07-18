@@ -47,6 +47,7 @@ const Main = function(){
           <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Link to reddit post</a>
           <br></br>
           <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Original data can be found here</a>
+          Made by <a href='https://ahernandez.glitch.me/'>Alex Hernandez</a>
 
           <Table/>
         </div>
