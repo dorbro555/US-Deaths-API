@@ -89,7 +89,7 @@ class Table extends React.Component {
         </form>
         
         <div style={{overflow:'auto'}}>
-          <table class='table' style={{width:'200%'}}>
+          <table class='table has-background-light' style={{width:'200%'}}>
             <thead>
               <tr>
                 <th><abbr>Title</abbr></th>

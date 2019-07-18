@@ -3,7 +3,6 @@ const Link = require('react-router-dom').Link
 const UnorderedList = require('./UnorderedList');
 const List = require('./List')
 const Table = require('./Table')
-const Form = require('./Form')
 
 const dependenciesArray = [
   'express - middleware for the node server',
@@ -41,6 +40,8 @@ const HelloWorld = function(){
             <p class='is-size-4'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
             with the purpose of contrasting gun deaths with the rest of deaths.</p>
           </div>
+          <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Reddit post can be found here</a>
+          <br></br>
           <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Original data can be found here</a>
 
           <Table/>
