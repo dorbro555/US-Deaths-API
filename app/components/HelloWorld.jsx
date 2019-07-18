@@ -38,7 +38,7 @@ const HelloWorld = function(){
         <div class='column is-10'>
           <div class='content'>
             <p class='is-size-4'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
-            with the purpose of contrasting gun deaths with the rest of deaths.</p>
+            with the purpose of contrasting gun-related deaths with the rest of deaths.</p>
           </div>
           <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Link to reddit post</a>
           <br></br>
