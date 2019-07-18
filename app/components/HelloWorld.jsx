@@ -27,8 +27,17 @@ const HelloWorld = function(){
     <div>
       <div class='columns is-centered'>
         <div class='column is-10'>
-          <h1>Data Mining Project for Deaths in America</h1>
-
+          <section class="hero">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class='title'>Data Mining Project for Deaths in America</h1>
+                <h2 class="subtitle">
+                  Statistics on Deaths in the USA 2000-2016, gathered from the FBI & CDC 
+                </h2>
+              </div>
+            </div>
+          </section>
+          
           <Link to='/about'>Learn about this app!</Link>
 
           <Table/>
