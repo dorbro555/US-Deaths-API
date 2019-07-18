@@ -70,7 +70,7 @@ class Table extends React.Component {
 
    
     return(
-      <div>
+      <div class='has-background-light'>
         <form onSubmit={this.handleSubmit}>
           <label>
             Pick the datasheet:
@@ -89,7 +89,6 @@ class Table extends React.Component {
         </form>
         
         <div style={{overflow:'auto'}}>
-          Table
           <table class='table' style={{width:'200%'}}>
             <thead>
               <tr>
