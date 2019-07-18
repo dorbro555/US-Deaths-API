@@ -37,8 +37,11 @@ const HelloWorld = function(){
       </section>
       <div class='columns is-centered'>
         <div class='column is-10'>
-          <div class='content'><p>This site serves as an web presentation of the </p></div>
-          <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Link to source data</a>
+          <div class='content'>
+            <p class='is-size-4'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
+            with the purpose of contrasting gun deaths with the rest of deaths.</p>
+          </div>
+          <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Original data can be found here</a>
 
           <Table/>
         </div>
