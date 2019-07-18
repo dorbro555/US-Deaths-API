@@ -92,7 +92,7 @@ class Table extends React.Component {
           <table class='table' style={{width:'200%'}}>
             <thead>
               <tr>
-                <th><abbr>Type</abbr></th>
+                <th><abbr>Title</abbr></th>
                 {this.state.headers}
               </tr>
             </thead>
