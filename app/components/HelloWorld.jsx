@@ -39,8 +39,10 @@ const HelloWorld = function(){
           <div class='content'>
             <p class='is-size-4'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
             with the purpose of contrasting gun-related deaths with the rest of deaths.</p>
-            <p>There is also an api attached to this site, the links for which
-              which can be found <Link to='/routes'>here</Link></p>
+            <p>There is also a JSON api attached to this site, the endpoints for which
+              which can be found <a href='https://helix-form-1.glitch.me/routes'>here</a>. 
+              The endpoints need to be appended to the end of https://helix-form-1.glitch.me/, for example
+              <a href='https://helix-form-1.glitch.me/db/US_Deaths'>https://helix-form-1.glitch.me/db/US_Deaths</a></p>
           </div>
           <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Link to reddit post</a>
           <br></br>
