@@ -5,13 +5,12 @@ const BrowserRouter = require('react-router-dom').BrowserRouter;
 const hashHistory = require('react-router-dom').hashHistory;
 
 /* Import Components */
-const HelloWorld = require('./components/HelloWorld');
+const Main = require('./components/Main');
 const About = require('./components/About');
 
 ReactDOM.render((
   <BrowserRouter>
     <div>
-      <Route exact path="/" component={HelloWorld}/>
-      <Route path="/about" component={About}/>
+      <Route exact path="/" component={Main}/>
     </div>
   </BrowserRouter>), document.getElementById('main'));
