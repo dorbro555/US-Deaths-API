@@ -2,9 +2,11 @@ const React = require('react')
 const aggregatedMap = require('./abbrLists')
 
 function numberWithCommas(x) {
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
+    if(!x.includes('%')){
+      return parseInt(x, 10).toLocaleString('en')
+    }else{
+      return x
+    }
 }
 
 class Table extends React.Component {
@@ -31,7 +33,7 @@ class Table extends React.Component {
                                                           <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
                                                             if(key != 'Title'){ 
-                                                              return <td key={key+j}>{parseInt(row[key],10).toLocaleString('en')}</td>
+                                                              return <td key={key+j}>{numberWithCommas()}</td>
                                                             }})}
                                                         </tr>})
     this.setState({headers: headers, data: data})
