@@ -48,7 +48,7 @@ class Table extends React.Component {
                                                             <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                             {Object.keys(row).map((key, j) => {
                                                               if(key != 'Title'){ 
-                                                                return <td key={key+j}>{row[key]}</td>
+                                                                return <td key={key+j}>{parseInt(row[key],10).toLocaleString('en')}</td>
                                                               }})}
                                                           </tr>}
                                        else {return <tr>
