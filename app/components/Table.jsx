@@ -1,6 +1,12 @@
 const React = require('react')
 const aggregatedMap = require('./abbrLists')
 
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
+
 class Table extends React.Component {
   constructor(props){
     super(props)
@@ -105,5 +111,6 @@ class Table extends React.Component {
     )
   }
 }
+
 
 module.exports = Table

@@ -48,7 +48,7 @@ const Main = function(){
           <br></br>
           <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Original data can be found here</a>
           <br></br>
-          Made by <a href='https://ahernandez.glitch.me/'>Alex Hernandez</a>
+          Made by <a href='https://ahernandez.glitch.me/'>Alexander Hernandez</a>
 
           <Table/>
         </div>
