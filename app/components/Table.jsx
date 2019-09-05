@@ -55,7 +55,7 @@ class Table extends React.Component {
                                                             <th key={i}>{row.Title}</th>
                                                             {Object.keys(row).map((key, j) => {
                                                               if(key != 'Title'){ 
-                                                                return <td key={key+j}>{row[key]}</td>
+                                                                return <td key={key+j}>{numberWithCommas(row[key])}</td>
                                                               }})}
                                                           </tr>}})
       this.setState({headers: headers, data: data})
