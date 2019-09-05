@@ -33,7 +33,7 @@ class Table extends React.Component {
                                                           <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                           {Object.keys(row).map((key, j) => {
                                                             if(key != 'Title'){ 
-                                                              return <td key={key+j}>{numberWithCommas()}</td>
+                                                              return <td key={key+j}>{numberWithCommas(row[key])}</td>
                                                             }})}
                                                         </tr>})
     this.setState({headers: headers, data: data})
@@ -50,14 +50,14 @@ class Table extends React.Component {
                                                             <th key={i}><abbr title={row.Title}>{aggregatedMap[row.Title]}</abbr></th>
                                                             {Object.keys(row).map((key, j) => {
                                                               if(key != 'Title'){ 
-                                                                return <td key={key+j}>{parseInt(row[key],10).toLocaleString('en')}</td>
+                                                                return <td key={key+j}>{numberWithCommas(row[key])}</td>
                                                               }})}
                                                           </tr>}
                                        else {return <tr>
                                                             <th key={i}>{row.Title}</th>
                                                             {Object.keys(row).map((key, j) => {
                                                               if(key != 'Title'){ 
-                                                                return <td key={key+j}>{parseInt(row[key],10).toLocaleString('en')}</td>
+                                                                return <td key={key+j}>{numberWithCommas(row[key])}</td>
                                                               }})}
                                                           </tr>}})
       this.setState({headers: headers, data: data})
