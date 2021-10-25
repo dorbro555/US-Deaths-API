@@ -20,14 +20,25 @@ const componentsMade = [
   'About - text content to show when "about" route is accessed',
 ];
 
+const violet = {
+  background: '#951555'
+}
+
+const nmVioletFlat = {
+  borderRadius: '50px',
+  background: '#951555',
+  boxShadow:  '20px 20px 60px #7f1248, -20px -20px 60px #ab1862'
+}
+
 /* the main page for the index route of this app */
 const Main = function(){
   return (
     <div>
-      <section class="hero is-dark">
+      <section class="hero is-dark" 
+        style={violet}>
         <div class="hero-body">
-          <div class="container">
-            <h1 class='title'>Data Mining Project for Deaths in America</h1>
+          <div class="container p-6" style={nmVioletFlat}>
+            <h1 class='title has-text-dark'>Data Mining Project for Deaths in America</h1>
             <h2 class="subtitle">
               Statistics on Deaths in the USA 2000-2016, gathered from the FBI & CDC 
             </h2>
