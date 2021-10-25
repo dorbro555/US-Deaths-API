@@ -24,11 +24,16 @@ const violet = {
   background: '#951555'
 }
 
+const violetLight = {
+  background: '#fdf0f6'
+}
+
 const nmVioletFlat = {
   borderRadius: '50px',
   background: '#951555',
-  boxShadow:  '20px 20px 60px #7f1248, -20px -20px 60px #ab1862'
+  boxShadow:  '27px 27px 54px #670e3b, -27px -27px 54px #c31c6f'
 }
+
 
 /* the main page for the index route of this app */
 const Main = function(){
@@ -38,19 +43,19 @@ const Main = function(){
         style={violet}>
         <div class="hero-body">
           <div class="container p-6" style={nmVioletFlat}>
-            <h1 class='title has-text-dark'>Data Mining Project for Deaths in America</h1>
+            <h1 class='title is-size-2'>Data Mining Project for Deaths in America</h1>
             <h2 class="subtitle">
               Statistics on Deaths in the USA 2000-2016, gathered from the FBI & CDC 
             </h2>
           </div>
         </div>
       </section>
-      <div class='columns is-centered'>
+      <div class='columns is-centered' style={violetLight}>
         <div class='column is-10'>
           <div class='content'>
-            <p class='is-size-4'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
+            <p class='is-size-4 has-text-weight-bold'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
             with the purpose of contrasting gun-related fatalities against the overall.</p>
-            <p>There is also a JSON api attached to this site, the endpoints for which
+            <p class='is-size-5 has-text-weight-semibold'>There is also a JSON api attached to this site, the endpoints for which
               which can be found <a href='https://us-deaths-overview.glitch.me/routes'>here</a>. 
               The endpoints need to be appended to the end of https://us-deaths-overview.glitch.me/, for example:  
               <a href='https://us-deaths-overview.glitch.me/db/US_Deaths'> https://us-deaths-overview.glitch.me/db/US_Deaths</a></p>

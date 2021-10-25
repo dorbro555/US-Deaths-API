@@ -1,0 +1,16 @@
+:root {
+    --primary: #951555;
+    --secondary: #771144;
+    --primary-dark: #1e0441;
+    --primary-light: #fdf0f6;
+}
+
+.nm-flat-violet {
+    border-radius: 50px;
+    background: #951555;
+    box-shadow:  20px 20px 60px #7f1248,
+             -20px -20px 60px #ab1862;
+}
+.bg-violet {
+    background: #951555;
+}

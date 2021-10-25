@@ -1,6 +1,12 @@
 const React = require('react')
 const aggregatedMap = require('./abbrLists')
 
+const nmVioletLightFlat = {
+  borderRadius: '21px',
+  background: '#fdf0f6',
+  boxShadow:  '27px 27px 54px #afa6aa, -27px -27px 54px #ffffff'
+}
+
 function numberWithCommas(x) {
     if(!x.includes('%')){
       return parseInt(x, 10).toLocaleString('en')
@@ -78,11 +84,11 @@ class Table extends React.Component {
 
    
     return(
-      <div class='has-background-light'>
+      <div style={nmVioletLightFlat}>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Pick the datasheet:
-            <select value={this.state.value} onChange={this.handleChange}>
+            <span class='is-size-4 px-2'>Pick the datasheet:</span>
+            <select value={this.state.value} onChange={this.handleChange} class="select is-medium p-2">
               <option value="/db">High Level Overview</option>
               <option value="/db/Breakdown_Overview">Breakdown of Overview</option>
               <option value="/db/Breakdown_Race">Breakdown of Overview by Race</option>
@@ -93,11 +99,11 @@ class Table extends React.Component {
               <option value="/db/Firearm_Breakdown">Firearm Death Specific Breakdown</option>
             </select>
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="button" />
         </form>
         
         <div style={{overflow:'auto'}}>
-          <table class='table is-bordered is-hoverable has-background-light' style={{width:'200%'}}>
+          <table class='table is-bordered is-hoverable has-background-light m-2' style={{width:'200%'}}>
             <thead>
               <tr>
                 <th><abbr>Title</abbr></th>
