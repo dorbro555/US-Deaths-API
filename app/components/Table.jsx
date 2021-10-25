@@ -84,8 +84,8 @@ class Table extends React.Component {
 
    
     return(
-      <div style={nmVioletLightFlat}>
-        <form onSubmit={this.handleSubmit}>
+      <div style={nmVioletLightFlat} class='p-4 mt-5'>
+        <form onSubmit={this.handleSubmit}  >
           <label>
             <span class='is-size-4 px-2'>Pick the datasheet:</span>
             <select value={this.state.value} onChange={this.handleChange} class="select is-medium p-2">
