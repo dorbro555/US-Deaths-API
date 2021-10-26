@@ -57,14 +57,14 @@ const Main = function(){
             with the purpose of contrasting gun-related fatalities against the overall.</p>
             <p class='is-size-5 has-text-weight-semibold'>There is also a JSON api attached to this site, the endpoints for which
               which can be found <a href='https://us-deaths-overview.glitch.me/routes'>here</a>. 
-              The endpoints need to be appended to the end of https://us-deaths-overview.glitch.me/, for example:  
-              <a href='https://us-deaths-overview.glitch.me/db/US_Deaths'> https://us-deaths-overview.glitch.me/db/US_Deaths</a></p>
+              The endpoints need to be appended to the end of https://gentle-inlet-76524.herokuapp.com/, for example:  
+              <a href='https://gentle-inlet-76524.herokuapp.com/db/US_Deaths'> https://gentle-inlet-76524.herokuapp.com/db/US_Deaths</a></p>
           </div>
           <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Link to reddit post</a>
           <br></br>
           <a href='https://docs.google.com/spreadsheets/d/1E0kkg5kdDoP6xMvXKd9kSLV_-0m8bluyV5Cp2F__U2c/edit?usp=sharing'>Original data can be found here</a>
           <br></br>
-          Made by <a href='https://ahernandez.glitch.me/'>Alexander Hernandez</a>
+          Made by <a href='https://ahernandez.dev/'>Alexander Hernandez</a>
 
           <Table/>
         </div>
