@@ -82,7 +82,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://gentle-inlet-76524.herokuapp.com/)
 
 An addition to the adopt-an-api movement, which means developing an api for some flat dataset(think .xls or .cvs), to encourage innovation through consumption of open data. The api is built on express and sqlite.
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -212,4 +212,4 @@ Project Link: [https://github.com/BleedingEffigy/US-Deaths-API](https://github.c
 [license-url]: https://github.com/BleedingEffigy/US-Deaths-API/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alex-hernandez-cloud-dev
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://rosamint.org/images/USDeathsApi.webp
