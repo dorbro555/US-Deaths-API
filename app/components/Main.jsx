@@ -56,9 +56,9 @@ const Main = function(){
             <p class='is-size-4 has-text-weight-bold'>This site serves as a web presentation of the data a redditor compiled on the subject of deaths in America,
             with the purpose of contrasting gun-related fatalities against the overall.</p>
             <p class='is-size-5 has-text-weight-semibold'>There is also a JSON api attached to this site, the endpoints for which
-              which can be found <a href='https://us-deaths-overview.glitch.me/routes'>here</a>. 
-              The endpoints need to be appended to the end of https://gentle-inlet-76524.herokuapp.com/, for example:  
-              <a href='https://gentle-inlet-76524.herokuapp.com/db/US_Deaths'> https://gentle-inlet-76524.herokuapp.com/db/US_Deaths</a></p>
+              which can be found <a href='https://adaptable-tabby-citron.glitch.me/routes'>here</a>. 
+              The endpoints need to be appended to the end of https://adaptable-tabby-citron.glitch.me/, for example:  
+              <a href='https://adaptable-tabby-citron.glitch.me/db/US_Deaths'> https://adaptable-tabby-citron.glitch.me/db/US_Deaths</a></p>
           </div>
           <a href='https://www.reddit.com/r/Firearms/comments/azi56k/3_year_data_mining_project_for_deaths_in_america/'>Link to reddit post</a>
           <br></br>
